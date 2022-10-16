@@ -258,12 +258,14 @@ uint8_t gc_execute_line(char *line)
               case 5: gc_block.modal.spindle = SPINDLE_DISABLE; break;
             }
             break;            
-          case 7: case 8: case 9:
+          case 7: case 8: case 9: case 10: case 11:
             word_bit = MODAL_GROUP_M8; 
             switch(int_value) {      
               case 7: gc_block.modal.coolant |= COOLANT_MIST_ENABLE; break;
               case 8: gc_block.modal.coolant |= COOLANT_FLOOD_ENABLE; break;
               case 9: gc_block.modal.coolant = COOLANT_DISABLE; break; // M9 disables both M7 and M8.
+              case 10: gc_block.modal.coolant -= COOLANT_MIST_ENABLE; break;
+              case 11: gc_block.modal.coolant -= COOLANT_FLOOD_ENABLE; break;
             }
             break;
           #ifdef ENABLE_PARKING_OVERRIDE_CONTROL
