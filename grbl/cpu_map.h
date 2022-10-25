@@ -233,7 +233,7 @@
   #define COOLANT_FLOOD_BIT   4 // MEGA2560 Digital Pin 10 - Ramps 1.4 12v output
   #define COOLANT_MIST_DDR    DDRH
   #define COOLANT_MIST_PORT   PORTH
-  #define COOLANT_MIST_BIT    6 // MEGA2560 Digital Pin 9 - Ramps 1.4 12v output
+  #define COOLANT_MIST_BIT    4 // MEGA2560 Digital Pin 7 - Ramps 1.4 12v output
 
   // Define user-control CONTROLs (cycle start, reset, feed hold) input pins.
   // NOTE: All CONTROLs pins must be on the same port and not on a port with other input pins (limits).
